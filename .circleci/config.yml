@@ -19,7 +19,6 @@ jobs:
       - run: |
         xcodebuild -version
         pip install torch
-        
 
 workflows:
     version: 2
