@@ -20,7 +20,14 @@ jobs:
     name: Setup
     runs-on: macos-14
     steps:
+      - name: Checkout transformers
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - name: Prepare custom environment variables
         shell: bash
-        run: |
+        run: |          
           ls -l
+          pip install torch
+          python check_mac.py
+          
