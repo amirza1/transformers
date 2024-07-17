@@ -21,7 +21,7 @@ jobs:
       - run: pip install torch
       - run: pip install torch
       - run: ls -l
-      - run: PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 python check_mac.py
+      - run: PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.7 python check_mac.py
 
 workflows:
     version: 2
