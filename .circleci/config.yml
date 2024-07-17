@@ -14,10 +14,14 @@ jobs:
       xcode: 14.2.0
     resource_class: macos.m1.medium.gen1
     steps:
+      - checkout
       # Commands will execute in macOS container
       # with Xcode 14.2.0 installed
       - run: xcodebuild -version
       - run: pip install torch
+      - run: pip install torch
+      - run: ls -l
+      - run: python check_mac.py
 
 workflows:
     version: 2
