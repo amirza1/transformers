@@ -12,7 +12,7 @@ jobs:
   build:
     macos:
       xcode: 14.2.0
-    resource_class: macos.m1.medium.gen1
+    resource_class: macos.m1.large.gen1
     steps:
       - checkout
       # Commands will execute in macOS container
@@ -21,7 +21,7 @@ jobs:
       - run: pip install torch
       - run: pip install torch
       - run: ls -l
-      - run: PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.7 python check_mac.py
+      - run: PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 python check_mac.py
 
 workflows:
     version: 2
